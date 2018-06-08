@@ -1,0 +1,18 @@
+section{
+    flex-flow:wrap row;
+    align-items:stretch;
+    justify-content: center;
+}
+article>div{
+    display:flex;
+    flex-direction:row;
+}
+article div{
+    margin:5px 15px;
+}
+article img{
+    max-width:100px;
+}
+article h3{
+    align-self:stretch;
+}
