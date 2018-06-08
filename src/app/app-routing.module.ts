@@ -12,7 +12,7 @@ import { DemandesComponent } from './demandes/demandes.component';
 const routes: Routes = [
     {path: '', component:ListeSeriesComponent},
     {path: 'series', component:ListeSeriesComponent},
-    {path: 'series/:id', component:SerieEditeComponent},
+    {path: 'series/:josue', component:SerieEditeComponent},
     {path: 'requetes', component:DemandesComponent},
     {path: 'creation', component:CreationSerieComponent},
     {path: 'tableau', component:TableauDeBordComponent},
