@@ -17,6 +17,8 @@ const routes: Routes = [
     {path: '', component:ListeSeriesComponent},
     {path: 'series', component:ListeSeriesComponent},
     {path: 'series/:josue', component:SerieEditeComponent},
+    {path: 'series-edit', component:SerieEditeComponent},
+    {path: 'series-edit/:id', component:SerieEditeComponent},
     {path: 'u', component:UsersComponent},
     {path: 'u/:lambda', component:UserComponent},
     {path: 'requetes', component:DemandesComponent},

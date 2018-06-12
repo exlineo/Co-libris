@@ -5,11 +5,11 @@ nav ul li ul{
     transition:all .3s ease-in-out;
     display:flex;
     flex-direction:column;
-    margin:4px;
+    margin:2px 0;
     padding:0;
 }
 nav ul li ul li{
-    margin:4px;
+    margin:2px 0;
 }
 nav ul li:hover ul{
     visibility:visible;
