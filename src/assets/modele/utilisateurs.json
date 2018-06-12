@@ -208,7 +208,7 @@
         "@type" : "Utilisateur",
         "civilite": "Mme",
         "nom" : "LE PLEUX",
-        "prenom": "Claire",
+        "prenom": "claire",
         "courriel" : "C.JMoulin.Artix.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
         "profil": [
@@ -224,8 +224,8 @@
         "_id": 12,
         "@type" : "Utilisateur",
         "civilite": "Mme",
-        "nom" : "JOTHY",
-        "prenom": "Anne",
+        "nom" : "jothy",
+        "prenom": "anne",
         "courriel" : "C.MRavel.StJeanDeLuz.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
         "profil": [

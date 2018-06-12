@@ -8,14 +8,24 @@ import { SerieEditeComponent } from './serie-edite/serie-edite.component';
 import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.component';
 import { CreationSerieComponent } from './creation-serie/creation-serie.component';
 import { DemandesComponent } from './demandes/demandes.component';
+import { UsersComponent } from './users/users/users.component';
+import { UserComponent } from './users/user/user.component';
+import { EditeursComponent } from './editeurs/editeurs.component';
+import { CollectionsComponent } from './editeurs/collections/collections.component';
 
 const routes: Routes = [
     {path: '', component:ListeSeriesComponent},
     {path: 'series', component:ListeSeriesComponent},
     {path: 'series/:josue', component:SerieEditeComponent},
+    {path: 'u', component:UsersComponent},
+    {path: 'u/:lambda', component:UserComponent},
     {path: 'requetes', component:DemandesComponent},
     {path: 'creation', component:CreationSerieComponent},
     {path: 'tableau', component:TableauDeBordComponent},
+    {path: 'editeurs', component:EditeursComponent},
+    {path: 'editeurs/:id', component:EditeursComponent},
+    {path: 'collections', component:CollectionsComponent},
+    {path: 'collections/:id', component:CollectionsComponent},
     {path: 'connexion', component:ConnexionComponent},
     {path: '**', component:Erreur404Component}
 ];

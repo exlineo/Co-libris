@@ -1,3 +1,12 @@
-<p>
-  creation-serie works!
-</p>
+<form (ngSubmit)="ajoute()" #f="ngForm">
+  <fieldset>
+    <label>Préfix de l'ISBN13 (trois premiers chiffres)</label>
+    <input name="prefix" required [(ngModel)]="isbnPrefix">
+    <label>Suffix de l'ISBN (après les trois premiers chiffres, 1 ou 2)</label>
+    <input name="prefix" list="isbn13" required [(ngModel)]="isbnSuffix">
+    <datalist id="isbn13">
+      <option *ngFor="let isbn of lSeries.listeSeries; let i=index" [value]="isbn.ISBN13">{{ isbn.ISBN13 }}</option>
+    </datalist>
+    <button type="submit" [disabled]="f.invalid">CREER</button>
+  </fieldset>
+</form>

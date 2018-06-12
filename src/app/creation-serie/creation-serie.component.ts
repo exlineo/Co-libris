@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeriesService } from '../services/series.service';
 
 @Component({
   selector: 'app-creation-serie',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreationSerieComponent implements OnInit {
 
-  constructor() { }
+  isbnPrefix:number=978;
+  isbnSuffix:number;
+
+  constructor(public lSeries:SeriesService) {
+
+  }
 
   ngOnInit() {
   }

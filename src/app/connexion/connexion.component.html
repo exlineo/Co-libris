@@ -1,12 +1,14 @@
 <section>
 <form (ngSubmit)="soumission(fm)" #fm="ngForm">
-  <label>Identifiant</label>
-  <input type="text" name="id" [(ngModel)]="user.id" required #idCtrl="ngModel">
-  <div *ngIf="idCtrl.invalid">Attention, vous devez renseigner l'ID pour vous identifier</div>
-  <label>Mot de passe</label>
-  <input name="mdp" [(ngModel)]="user.mdp" required>
-  <p>{{user.id}} - {{user.mdp}}</p>
-  <button (click)="testID()">Test ID</button>
-  <button type="submit">ENVOIE</button>
+  <fieldset>
+    <label>Identifiant</label>
+    <input type="text" name="id" [(ngModel)]="user.id" required #idCtrl="ngModel">
+    <div *ngIf="idCtrl.invalid">Attention, vous devez renseigner l'ID pour vous identifier</div>
+    <label>Mot de passe</label>
+    <input name="mdp" type="password" [(ngModel)]="user.mdp" required>
+    <p>{{user.id}} - {{user.mdp}}</p>
+    <button (click)="testID()">Test ID</button>
+    <button type="submit" [disabled]="fm.invalid">ENVOIE</button>
+  </fieldset>
 </form>
 </section>

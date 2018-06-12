@@ -1,0 +1,17 @@
+nav ul li ul{
+    opacity:0;
+    visibility:hidden;
+    position:absolute;
+    transition:all .3s ease-in-out;
+    display:flex;
+    flex-direction:column;
+    margin:4px;
+    padding:0;
+}
+nav ul li ul li{
+    margin:4px;
+}
+nav ul li:hover ul{
+    visibility:visible;
+    opacity:1;
+}

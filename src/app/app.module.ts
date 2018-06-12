@@ -13,9 +13,16 @@ import { CreationSerieComponent } from './creation-serie/creation-serie.componen
 import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.component';
 import { DemandesComponent } from './demandes/demandes.component';
 import { SeriesService } from './services/series.service';
+import { UsersService } from './services/users.service';
 import { AuthService } from './services/auth.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './users/users/users.component';
+import { UserComponent } from './users/user/user.component';
+import { FiltreIsbnPipe } from './creation-serie/filtreisbn.pipe';
+import { FiltretitrePipe, FiltrerPipe } from './listeseries/filtretitre.pipe';
+import { EditeursComponent } from './editeurs/editeurs.component';
+import { CollectionsComponent } from './editeurs/collections/collections.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,14 @@ import { HttpClientModule } from '@angular/common/http';
     SerieEditeComponent,
     CreationSerieComponent,
     TableauDeBordComponent,
-    DemandesComponent
+    DemandesComponent,
+    UsersComponent,
+    UserComponent,
+    FiltreIsbnPipe,
+    FiltretitrePipe,
+    FiltrerPipe,
+    EditeursComponent,
+    CollectionsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +52,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     SeriesService,
+    UsersService,
     AuthService
   ],
   bootstrap: [AppComponent]
