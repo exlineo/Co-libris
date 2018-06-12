@@ -1,0 +1,18 @@
+<section>
+  <article *ngFor="let u of uService.listeUsers; let i=index">
+    <div class="edite" (click)="u.edit = !u.edit">E</div>
+    <h3>{{ u.civilite }} {{ u.nom | titlecase }} {{ u.prenom | uppercase }}</h3>
+    <div *ngIf="!u.edit">
+      <p>Courriel : {{ u.courriel }}</p>
+    </div>
+    <form *ngIf="u.edit" (ngSubmit)="showSubmit(uService.listeUsers[i])">
+      <fieldset>
+        <input name="civilite" [(ngModel)]="u.civilite" placeholder="Civilité">
+        <input name="nom" [(ngModel)]="u.nom" placeholder="Nom">
+        <input name="prenom" [(ngModel)]="u.prenom" placeholder="Prénom">
+        <input name="courriel" [(ngModel)]="u.courriel" placeholder="Courriel">
+        <button type="submit">MAJ</button>
+      </fieldset>
+    </form>
+  </article>
+</section>
