@@ -11,6 +11,7 @@ export class SeriesService {
   serie:EditionModele;
   listeSeries:Array<object>;
   listeEditeurs:Array<object>;
+  listeColleges:Array<object>;
 
   constructor(private http:HttpClient) {
     this.serie = {

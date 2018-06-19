@@ -8,6 +8,8 @@ import { UsersService } from '../../services/users.service';
 })
 export class UsersComponent implements OnInit {
 
+  filtre:number=0;
+
   constructor(public uService:UsersService) { }
 
   ngOnInit() {

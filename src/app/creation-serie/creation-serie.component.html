@@ -3,10 +3,43 @@
     <label>Préfix de l'ISBN13 (trois premiers chiffres)</label>
     <input name="prefix" required [(ngModel)]="isbnPrefix">
     <label>Suffix de l'ISBN (après les trois premiers chiffres, 1 ou 2)</label>
-    <input name="prefix" list="isbn13" required [(ngModel)]="isbnSuffix">
+    <input name="prefix" list="isbn13" required [(ngModel)]="isbn13" (change)="getSerieActuelle()">
     <datalist id="isbn13">
       <option *ngFor="let isbn of lSeries.listeSeries; let i=index" [value]="isbn.ISBN13">{{ isbn.ISBN13 }}</option>
     </datalist>
-    <button type="submit" [disabled]="f.invalid">CREER</button>
+</fieldset>
+
+<fieldset *ngIf="serieActuelle">
+    <label>Titre</label>
+    <input type="text" name="title" [(ngModel)]="serieActuelle.title" required #idCtrl="ngModel">
+    <div *ngIf="idCtrl.invalid">Attention, vous devez renseigner l'ID pour vous identifier</div>
+    
+    <label>Auteur</label>
+    <input name="author" type="text" [(ngModel)]="serieActuelle.author" required>
+    
+    <label>Editeur</label>
+    <input name="publisher" type="text" [(ngModel)]="serieActuelle.publisher" required>
+
+    <label>Collection</label>
+    <input name="collection" type="text" [(ngModel)]="serieActuelle.collection" required>
+
+    <label>Langue</label>
+    <input name="language" type="text" [(ngModel)]="serieActuelle.language" required>
+
+    <label>Date de publication</label>
+    <input name="publishedDate" type="text" [(ngModel)]="serieActuelle.publishedDate">
+    {{serieActuelle.publishedDate | date:'dd-MM-yyyy'}}
+
+    <label>pages</label>
+    <input name="pages" type="number" [(ngModel)]="serieActuelle.pages" required>
+
+    <label>ISBN10</label>
+    <input name="isbn10" type="number" [(ngModel)]="serieActuelle.ISBN10" required>
+
+    <label>ISBN13</label>
+    <input name="isbn13" type="number" [(ngModel)]="serieActuelle.ISBN13" required>
+
+    <button type="reset">Annuler</button>
+    <button type="submit" [disabled]="f.invalid">ENVOIE</button>
   </fieldset>
 </form>

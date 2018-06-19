@@ -3,5 +3,6 @@ export interface SerieModele {
     codeBar:number;
     quantite:number;
     niveau:Array<number>;
+    publishedDate?:string;
     statut?:number;
 }

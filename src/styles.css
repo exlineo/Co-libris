@@ -14,6 +14,7 @@ section{
     flex-flow:wrap row;
     justify-content: space-between;
     padding:10px;
+    width:100%;
 }
 article{
     margin:20px;

@@ -19,10 +19,11 @@ import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './users/users/users.component';
 import { UserComponent } from './users/user/user.component';
-import { FiltreIsbnPipe } from './creation-serie/filtreisbn.pipe';
+import { FiltreIsbnPipe, FiltreSeriePipe } from './creation-serie/filtreisbn.pipe';
 import { FiltretitrePipe, FiltrerPipe } from './listeseries/filtretitre.pipe';
 import { EditeursComponent } from './editeurs/editeurs.component';
 import { CollectionsComponent } from './editeurs/collections/collections.component';
+import { UsersPipe } from './users/users.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CollectionsComponent } from './editeurs/collections/collections.compone
     FiltretitrePipe,
     FiltrerPipe,
     EditeursComponent,
-    CollectionsComponent
+    CollectionsComponent,
+    UsersPipe
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ import { CollectionsComponent } from './editeurs/collections/collections.compone
   providers: [
     SeriesService,
     UsersService,
-    AuthService
+    AuthService,
+    FiltreSeriePipe
   ],
   bootstrap: [AppComponent]
 })

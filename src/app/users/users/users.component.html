@@ -1,5 +1,9 @@
 <section>
-  <article *ngFor="let u of uService.listeUsers; let i=index">
+  <button (click)="filtre=0">Professeur</button>
+  <button (click)="filtre=1">Documentalistes</button>
+  <button (click)="filtre=2">Administrateur</button>
+  
+  <article *ngFor="let u of uService.listeUsers | usersFiltre:filtre; let i=index">
     <div class="edite" (click)="u.edit = !u.edit">E</div>
     <h3>{{ u.civilite }} {{ u.nom | titlecase }} {{ u.prenom | uppercase }}</h3>
     <div *ngIf="!u.edit">
