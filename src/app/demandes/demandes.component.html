@@ -1,3 +1,5 @@
-<p>
-  demandes works!
-</p>
+<section>
+  <article *ngFor="let s of lSeries.listeSeries | demandeFiltre:lDemandes.listeDemandes">
+    <h3>{{ s.title }}</h3>
+  </article>
+</section>

@@ -1,0 +1,22 @@
+[
+    {
+        "@type" : "Reservation",
+        "ISBN13" : 9782013949675,
+        "utilisateur_id" : 12,
+        "college": 0,
+        "dateDemande" : "2018-05-02T16:43:00Z",
+        "dateDebut" :   "2018-05-15T12:00:00Z",
+        "dateFin" :     "2018-06-15T12:00:00Z",
+        "codeBar" : 47862133
+    },
+    {
+        "@type" : "Reservation",
+        "ISBN13" : 9782013949675,
+        "utilisateur_id" : 6,
+        "college": 0,
+        "dateDemande" : "2018-05-02T16:43:00Z",
+        "dateDebut" :   "2018-05-15T12:00:00Z",
+        "dateFin" :     "2018-06-15T12:00:00Z",
+        "codeBar" : 47860333
+    }
+]

@@ -34,7 +34,6 @@ export class SeriesService {
   getSeries(){
     this.http.get<Array<EditionModele>>('assets/modele/series.json').subscribe(
       (data) => {
-        console.log(data);
         this.listeSeries = data;
       }
     );
@@ -43,8 +42,16 @@ export class SeriesService {
   getEditeurs(){
     this.http.get<Array<EditionModele>>('assets/modele/editeurs.json').subscribe(
       (data) => {
-        console.log(data);
         this.listeEditeurs = data;
+        this.getSeries();
+      }
+    );
+  }
+  // Obtenir la liste des colleges
+  getColleges(){
+    this.http.get<Array<object>>('assets/modele/colleges.json').subscribe(
+      (data) => {
+        this.listeColleges = data;
         this.getSeries();
       }
     );

@@ -25,6 +25,9 @@ import { EditeursComponent } from './editeurs/editeurs.component';
 import { CollectionsComponent } from './editeurs/collections/collections.component';
 import { UsersPipe } from './users/users.pipe';
 
+import { DemandesService } from './services/demandes.service';
+import { DemandeSeriesPipe } from './demandes/demande-series.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +47,8 @@ import { UsersPipe } from './users/users.pipe';
     FiltrerPipe,
     EditeursComponent,
     CollectionsComponent,
-    UsersPipe
+    UsersPipe,
+    DemandeSeriesPipe
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,8 @@ import { UsersPipe } from './users/users.pipe';
   providers: [
     SeriesService,
     UsersService,
-    AuthService,
+    AuthService, 
+    DemandesService,
     FiltreSeriePipe
   ],
   bootstrap: [AppComponent]

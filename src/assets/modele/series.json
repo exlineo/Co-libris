@@ -98,7 +98,7 @@
             {
                 "@type": "Serie",
                 "college": 0,
-                "codeBar": 47860333,
+                "codeBar": 47860343,
                 "quantite": 29,
                 "niveau": [5],
                 "statut": 1
@@ -137,7 +137,7 @@
             {
                 "@type": "Serie",
                 "college": 0,
-                "codeBar": 47860333,
+                "codeBar": 47860433,
                 "quantite": 30,
                 "niveau": [3],
                 "statut": 2
@@ -238,7 +238,7 @@
             {
                 "@type": "Serie",
                 "college": 0,
-                "codeBar": 47860333,
+                "codeBar": 47864333,
                 "quantite": 49,
                 "niveau": [6],
                 "statut": 1
@@ -277,7 +277,7 @@
             {
                 "@type": "Serie",
                 "college": 0,
-                "codeBar": 47860333,
+                "codeBar": 47460333,
                 "quantite": 31,
                 "niveau": [6],
                 "statut": 1
@@ -316,7 +316,7 @@
             {
                 "@type": "Serie",
                 "college": 0,
-                "codeBar": 47860333,
+                "codeBar": 44860333,
                 "quantite": 12,
                 "niveau": [6],
                 "statut": 0

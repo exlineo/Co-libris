@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { DemandesService } from '../services/demandes.service';
+import { SeriesService } from '../services/series.service';
+
+import { DemandeSeriesPipe } from './demande-series.pipe'
 
 @Component({
   selector: 'app-demandes',
@@ -7,9 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemandesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public lDemandes:DemandesService, public lSeries:SeriesService) {
+    console.log(lDemandes.listeDemandes);
+  }
 
   ngOnInit() {
+
   }
 
 }

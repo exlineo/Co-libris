@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsersService {
   listeUsers:Array<object>;
-  
+
   constructor(private http:HttpClient) {
     this.getUsers();
   }
@@ -14,7 +14,6 @@ export class UsersService {
   getUsers(){
     this.http.get<Array<object>>('assets/modele/utilisateurs.json').subscribe(
       data => {
-        console.log(data);
         this.listeUsers = data;
       }
     );
