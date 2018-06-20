@@ -11,12 +11,14 @@ import { DemandesComponent } from './demandes/demandes.component';
 import { UsersComponent } from './users/users/users.component';
 import { UserComponent } from './users/user/user.component';
 import { EditeursComponent } from './editeurs/editeurs.component';
+import { AuthGuard } from './auth.guard';
+import { AuthAdminGuard } from './auth-admin.guard';
 import { CollectionsComponent } from './editeurs/collections/collections.component';
 
 const routes: Routes = [
     {path: '', component:ListeSeriesComponent},
-    {path: 'series', component:ListeSeriesComponent},
-    {path: 'series/:josue', component:SerieEditeComponent},
+    {path: 'series', component:ListeSeriesComponent, canActivate:[AuthGuard]},
+    {path: 'series/:josue', component:SerieEditeComponent, canActivate:[AuthAdminGuard]},
     {path: 'series-edit', component:SerieEditeComponent},
     {path: 'series-edit/:id', component:SerieEditeComponent},
     {path: 'u', component:UsersComponent},

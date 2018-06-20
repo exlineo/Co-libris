@@ -16,7 +16,7 @@ import { SeriesService } from './services/series.service';
 import { UsersService } from './services/users.service';
 import { AuthService } from './services/auth.service';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './users/users/users.component';
 import { UserComponent } from './users/user/user.component';
 import { FiltreIsbnPipe, FiltreSeriePipe } from './creation-serie/filtreisbn.pipe';
@@ -27,6 +27,7 @@ import { UsersPipe } from './users/users.pipe';
 
 import { DemandesService } from './services/demandes.service';
 import { DemandeSeriesPipe } from './demandes/demande-series.pipe';
+import { AuthIntercepteur } from './services/auth-intercepteur';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { DemandeSeriesPipe } from './demandes/demande-series.pipe';
     UsersService,
     AuthService, 
     DemandesService,
-    FiltreSeriePipe
+    FiltreSeriePipe,
+    {provide: HTTP_INTERCEPTORS, useClass:AuthIntercepteur, multi:true}
   ],
   bootstrap: [AppComponent]
 })

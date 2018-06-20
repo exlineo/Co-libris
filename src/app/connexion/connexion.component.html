@@ -1,8 +1,5 @@
 <section>
-  <header>
-    <img src="/assets/images/colibris.png"/>
-  </header>
-<form (ngSubmit)="soumission(fm)" #fm="ngForm">
+<form (ngSubmit)="soumission(fm)" #fm="ngForm" *ngIf="!auth.prof">
   <fieldset>
     <label>Identifiant</label>
     <input type="text" name="id" [(ngModel)]="user.id" required #idCtrl="ngModel">
@@ -14,4 +11,5 @@
     <button type="submit" [disabled]="fm.invalid">ENVOIE</button>
   </fieldset>
 </form>
+<button (click)="auth.deconne()" *ngIf="auth.prof">Déconnexion</button>
 </section>
